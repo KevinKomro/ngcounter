@@ -18,19 +18,24 @@ export class CounterListComponent implements OnInit {
 
   create(): void {
 
-    if(this.counters.length < 5) {
-      const counter: Counter = new Counter();
-      this.counters.push(counter);
-    } else {
-      const supercounter: SuperCounter = new SuperCounter();
-      this.supercounters.push(supercounter);
-      
+    if(this.counters.length === 5) {
+      let sum: number = 0;
+
+      for(let i in this.counters){
+        sum += this.counters[i].value;
+      }
+
       // empty normal counter array 
       this.counters = [];
+      const supercounter: SuperCounter = new SuperCounter();
+      supercounter.value = sum;
+      this.supercounters.push(supercounter);
+      
+    } else {
+      const counter: Counter = new Counter();
+      this.counters.push(counter);
 
     }
-    
-
   }
 
   ngOnInit(): void {

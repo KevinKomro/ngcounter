@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CounterListComponent } from './counter-list/counter-list.component';
 import { CounterDetailComponentComponent } from './counter-detail-component/counter-detail-component.component';
+import { SuperCounterDetailComponentComponent } from './super-counter-detail-component/super-counter-detail-component.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { CounterDetailComponentComponent } from './counter-detail-component/coun
     AppComponent,
     CounterListComponent,
     CounterDetailComponentComponent,
+    SuperCounterDetailComponentComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,9 @@
     <button class="btn btn-primary" (click)="create()">Create</button>
 </div>
 
-<counter *ngFor="let counter of counters" [counter]="counter"></counter>
-
-<supercounter *ngFor="let supercounter of supercounters" [supercounter]="supercounter"></supercounter>
+<div class="row">
+    <counter class="col-4" *ngFor="let counter of counters" [counter]="counter"></counter>
+    <div *ngIf="supercounters.length > 0">
+      <app-super-counter class="col-5" *ngFor="let superCounter of supercounters" [counter]="superCounter"></app-super-counter>
+    </div>
+  </div>
