@@ -13,12 +13,12 @@ export class SuperCounterDetailComponentComponent implements OnInit {
   constructor() { }
 
   Increment(): void {
-    this.counter.value++;
+    this.counter.value += 3;
   }
 
   Decrement(): void {
-    if (this.counter.value > 0) {
-      this.counter.value--;
+    if (this.counter.value >= 3) {
+      this.counter.value -= 3;
     }
   }
 

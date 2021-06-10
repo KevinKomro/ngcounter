@@ -11,6 +11,7 @@ export class CounterListComponent implements OnInit {
 
   counters: Counter[] = [];
   supercounters: SuperCounter[] = [];
+  superdupercounters: SuperDuperCounter[] = [];
   
   name: string = 'Counter Wall';
 

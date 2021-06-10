@@ -6,8 +6,11 @@
 </div>
 
 <div class="row">
-    <counter class="col-4" *ngFor="let counter of counters" [counter]="counter"></counter>
+    <counter class="col-sm" *ngFor="let counter of counters" [counter]="counter"></counter>
     <div *ngIf="supercounters.length > 0">
-      <app-super-counter class="col-5" *ngFor="let superCounter of supercounters" [counter]="superCounter"></app-super-counter>
+      <app-super-counter class="col-lg" *ngFor="let superCounter of supercounters" [counter]="superCounter"></app-super-counter>
     </div>
-  </div>
+    <div *ngIf="superdupercounters.length > 0">
+      <app-super-duper-counter class="col-lg" *ngFor="let superDuperCounter of superdupercounters" [counter]="superDuperCounter"></app-super-duper-counter>
+    </div>
+  </div>  
